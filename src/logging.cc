@@ -1352,9 +1352,9 @@ void LogMessage::SendToLog() EXCLUSIVE_LOCKS_REQUIRED(log_mutex) {
   // Messages of a given severity get logged to lower severity logs, too
 
   if (!already_warned_before_initgoogle && !IsGoogleLoggingInitialized()) {
-    const char w[] = "WARNING: Logging before InitGoogleLogging() is "
-                     "written to STDERR\n";
-    WriteToStderr(w, strlen(w));
+    //const char w[] = "WARNING: Logging before InitGoogleLogging() is "
+    //                 "written to STDERR\n";
+   // WriteToStderr(w, strlen(w));
     already_warned_before_initgoogle = true;
   }
 
